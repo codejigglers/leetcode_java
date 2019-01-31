@@ -1,6 +1,6 @@
 package test;
 
-import code.*;
+import code.UglyNumberII;
 import org.junit.Test;
 
 
@@ -9,13 +9,14 @@ import static org.junit.Assert.*;
 public class UglyNumberIITest {
 
     @Test
-    public void test() {
+    public void tesct() {
         assertEquals("ABC", "ABC");
+        assertNotEquals("ABC", "AVC");
     }
 
     @Test
     public void test1() {
-        assertEquals("ABC", "ABCD");
+        assertEquals("ABC", "ABC");
     }
 
 }

@@ -7,7 +7,7 @@ public class IntegerBreak {
         System.out.println(solution.integerBreak(9));
     }
 
-    static class Solution {
+    public static class Solution {
         public int integerBreak(int n) {
             if(n==0){
                 return 0;
