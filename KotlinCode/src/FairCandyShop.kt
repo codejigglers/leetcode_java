@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    var v : Solution = Solution()
+    var v : RobotReturnOrigin = RobotReturnOrigin()
 
     var a : IntArray = IntArray(2)
     a[0] = 1
@@ -9,9 +9,7 @@ fun main(args: Array<String>) {
 
     b[0] = 2
     b[1] = 2
-    for(i in v.fairCandySwap(a, b)) {
-        print(i)
-    }
+
 }
 class Solution {
 

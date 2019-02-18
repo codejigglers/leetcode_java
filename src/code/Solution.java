@@ -1,60 +1,62 @@
 package code;
 
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
 public class Solution {
 
-    public static void main(String[] args){
-        solution(2,"1A 2F 1C");
+    public static void main(String[] args) {
+        
     }
 
-    public static int solution (int N, String S) {
+    // Complete the hasVowels function below.
+    static List<Integer> hasVowels(List<String> strArr, List<String> query) {
 
-        boolean[][] matrix = new boolean[N][12];
+        HashMap<Integer, Integer> hMap = new HashMap<>();
+        Set<Character> vowelSet = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u'));
+        List<Integer> toReturn = new ArrayList<>();
 
-        int ans  = 0;
+        for(int i = 0; i < strArr.size(); i++){
 
-        for(int i=0; i<matrix.length; i++){
-            for (int j=0; j<12; j++){
-                if(j==3 || j==8){
-                    matrix[i][j] = true;
+            if(vowelSet.contains(strArr.get(i).charAt(0)) && vowelSet.contains(strArr.get(i).charAt(strArr.get(i).length() - 1))){
+                if(hMap.isEmpty()){
+                    hMap.put(i + 1, 1);
+                }else{
+                    hMap.put(i + 1, hMap.get(i) + 1);
+                }
+            }else{
+                if(hMap.isEmpty()){
+                    hMap.put(i + 1, 0);
+                }else{
+                    hMap.put(i + 1, hMap.get(i) + 0);
                 }
             }
         }
 
-        String[] breaks = S.split(" ");
-
-        for(String s:breaks){
-            int row = Integer.parseInt(s.substring(0, s.length() - 1));
-            int col = (s.charAt(s.length()-1) - 'A');
-
-            if(col>2 && col<7){
-                col=col+1;
+        for(int i = 0; i < query.size(); i++){
+            String[] index = query.get(i).split("-");
+            System.out.println(index[0]);
+            if(index[0] == index[1]){
+                int n = (int)hMap.get(index[0]);
+                toReturn.add(n);
             }
-            else if(col>6){
-                col=col+2;
-            }
+            else{
+                int n = (int)hMap.get(index[1]);
+                int m = (int)hMap.get(index[0]);
+                toReturn.add(n - m + 1);
 
-            matrix[row - 1][col] = true;
+            }
         }
 
-        for(int i=0; i<matrix.length; i++){
-            for (int j=0; j<12; j++){
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println("");
-        }
-
-        for(int i=0; i<matrix.length; i++){
-            for (int j=0; j<12; j++){
-                if(j<10 && !matrix[i][j]){
-                    if(!matrix[i][j+1] && !matrix[i][j+2]){
-                        ans+=1;
-                        j+=3;
-                    }
-                }
-            }
-
-        }
-        return ans;
-
+        return toReturn;
     }
 }

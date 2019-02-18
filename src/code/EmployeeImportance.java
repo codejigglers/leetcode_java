@@ -15,7 +15,7 @@ class Employee {
 public class EmployeeImportance {
 
     static class Solution {
-        public int getImportance(List<Employee> employees, int id) {
+        public int getImportance(List<Employee2> employees, int id) {
             return 1;
         }
     }
