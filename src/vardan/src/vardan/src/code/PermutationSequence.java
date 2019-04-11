@@ -1,4 +1,4 @@
-package code;
+package vardan.src.code;
 
 import java.util.ArrayList;
 import java.util.Collections;

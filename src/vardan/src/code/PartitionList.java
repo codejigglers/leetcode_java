@@ -1,5 +1,7 @@
 package code;
 
+import vardan.src.code.CustomCollectionsUtility.ListNode;
+
 public class PartitionList {
 
     public static void main(String[] args) {
@@ -7,12 +9,12 @@ public class PartitionList {
     }
 
     static class Solution {
-        public CustomCollectionsUtility.ListNode partition(CustomCollectionsUtility.ListNode head, int x) {
-            CustomCollectionsUtility.ListNode small = new CustomCollectionsUtility.ListNode(1);
-            CustomCollectionsUtility.ListNode big = new CustomCollectionsUtility.ListNode(1);
+        public ListNode partition(ListNode head, int x) {
+            ListNode small = new ListNode(1);
+            ListNode big = new ListNode(1);
 
-            CustomCollectionsUtility.ListNode toReturn = small;
-            CustomCollectionsUtility.ListNode ref = big;
+            ListNode toReturn = small;
+            ListNode ref = big;
 
             while(head != null) {
                 if(head.val < x) {

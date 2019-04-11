@@ -1,3 +1,5 @@
+package code.src;
+
 import java.util.HashMap;
 
 public class AddandSearchWord {

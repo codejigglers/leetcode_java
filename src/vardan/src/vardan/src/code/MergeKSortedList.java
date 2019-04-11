@@ -1,15 +1,18 @@
-package code;
+package vardan.src.code;
+
+import vardan.src.code.CustomCollectionsUtility.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
-import static code.CustomCollectionsUtility.*;
+
+import static vardan.src.code.CustomCollectionsUtility.createListNode;
 
 public class MergeKSortedList {
 
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        ListNode a = createListNode(new int[]{});
+        CustomCollectionsUtility.ListNode a = createListNode(new int[]{});
         ListNode b = createListNode(new int[]{1});
         ListNode c = createListNode(new int[]{3, 6});
 

@@ -1,4 +1,6 @@
-package code;
+package vardan.src.code;
+
+import vardan.src.code.CustomCollectionsUtility;
 
 public class LinkedListCycleII {
 

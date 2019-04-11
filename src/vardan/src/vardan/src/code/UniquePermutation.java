@@ -1,4 +1,4 @@
-package code;
+package vardan.src.code;
 
 public class UniquePermutation {
 }

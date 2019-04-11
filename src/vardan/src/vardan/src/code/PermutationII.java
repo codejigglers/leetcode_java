@@ -1,4 +1,4 @@
-package code;
+package vardan.src.code;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public class PermutationII {
 
     static class Solution {
         public List<List<Integer>> permuteUnique(int[] nums) {
-
+            return null;
         }
 
         public void helperMethod(int[] nums, int startPosition) {

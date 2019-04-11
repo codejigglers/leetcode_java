@@ -1,5 +1,8 @@
 package code;
-import code.CustomCollectionsUtility.ListNode;
+
+import vardan.src.code.CustomCollectionsUtility;
+import vardan.src.code.CustomCollectionsUtility.ListNode;
+
 public class PlusOneLinkedList {
     public static void main(String[] args) {
         ListNode n = CustomCollectionsUtility.createListNode(new int[]{8,9,9,9});
@@ -8,6 +11,10 @@ public class PlusOneLinkedList {
     }
 
     static class Solution {
+        public ListNode plusOne() {
+            return plusOne();
+        }
+
         public ListNode plusOne(ListNode head) {
             if(head == null) {
                 return head;
