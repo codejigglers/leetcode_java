@@ -21,8 +21,6 @@ public class AkashQ {
 
 
     }
-
-
     public static int countStudents(List<Integer> height) {
 
 

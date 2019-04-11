@@ -7,10 +7,10 @@ public class LinkedListCycleII {
     }
 
     private static class Solution {
-        public ListNode detectCycle(ListNode head) {
+        public CustomCollectionsUtility.ListNode detectCycle(CustomCollectionsUtility.ListNode head) {
 
-            ListNode slow = head;
-            ListNode fast = head;
+            CustomCollectionsUtility.ListNode slow = head;
+            CustomCollectionsUtility.ListNode fast = head;
 
 
 
@@ -35,12 +35,3 @@ public class LinkedListCycleII {
         }
     }
 }
-
- class ListNode {
-     int val;
-     ListNode next;
-     ListNode(int x) {
-         val = x;
-         next = null;
-     }
- }
