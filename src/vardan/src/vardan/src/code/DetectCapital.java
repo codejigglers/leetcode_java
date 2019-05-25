@@ -1,4 +1,4 @@
-package vardan.src.code;
+package vardan.src.vardan.src.code;
 
 public class DetectCapital {
 

@@ -1,12 +1,12 @@
-<<<<<<< HEAD:src/code/MergeKSortedList.java
-package code;
+package code.src;
+
+import code.CustomCollectionsUtility;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import static code.CustomCollectionsUtility.*;
 
-=======
->>>>>>> 343975c8b88139bca7522d0d73209eb8578f817a:src/code/src/MergeKSortedList.java
+
 public class MergeKSortedList {
 
 
@@ -44,7 +44,7 @@ public class MergeKSortedList {
                 pq.add(item);
             }
 
-            ListNode pointer = new ListNode(1);
+            CustomCollectionsUtility.ListNode pointer = new CustomCollectionsUtility.ListNode(1);
             ListNode n = pointer;
 
             while (pq.size() > 0) {
